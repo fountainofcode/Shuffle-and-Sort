@@ -1,0 +1,95 @@
+/* Desktop view*/
+/* greater than or equal to given pixel*/
+@media only screen and (min-width: 376px){
+    main{
+        margin: 0;
+        padding: 0;
+        
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+            "nav nav"
+            "cards dashboard"
+            "footer footer";
+
+        min-height: 100vh;    
+    }
+
+    .nav{
+        grid-area: nav;
+        margin: 0;
+        padding: 0;
+
+        background: #FFFFFF;
+        border-bottom: solid #BFBFBF;
+
+        position: relative;
+    }
+
+    .nav>p{
+        position: absolute;
+        width: 100%;
+        bottom: 5px;
+        text-align: center;
+
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .dashboard{
+        grid-area: dashboard;
+
+        background: #EFEFEF;
+    }
+
+    .dashboard .btn{
+        margin: 1.8rem 3vw .3rem 3vw;
+        
+        width: 19vw;
+        height: 2.5rem;
+        border-radius: 9px;
+        background: #72C3DC;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: small;
+        border: none;
+        box-shadow: 0 6px 2px -2px #2B8EAD;
+        cursor: pointer;
+    }
+
+    .cards{
+        grid-area: cards;
+        
+        display: grid;
+        grid-template-columns: 25vw 25vw 25vw;    
+    }
+
+    .cards > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: none;
+        color: #ffffff;
+        font-size: 75px;    
+    }
+
+
+    .footer{
+        grid-area: footer;
+
+        font-size: small;
+        background: #EFEFEF;
+
+        position: relative;
+    }
+
+    .footer p{
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        text-align: center;
+    }
+
+}
